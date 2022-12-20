@@ -1,3 +1,6 @@
+================================================================================
+Higher Order Function Map
+================================================================================
 function findLength(arr) {
     arr = arr.map((str) => {
       if (str==null || str == 0 || str == undefined){
@@ -14,3 +17,32 @@ function findLength(arr) {
 let farr = ["Hi","My","Name",null, "is","Spyke",null]
 findLength(farr);
 module.exports = findLength;
+
+================================================================================
+Higher Order Function Filter
+================================================================================
+function filterByCity(arr) {
+const output = arr.filter((emp) => {
+          let inputString = emp.city;
+          let lowerCaseString = inputString.toLowerCase();
+               filteredArr = (lowerCaseString=="bangalore" || lowerCaseString=="hyderabad")
+               // console.log(filteredArr);
+               return filteredArr;
+               })
+console.log(output);
+return output;
+// for(let i=0;i<output.length;i++){
+//    console.log(output);
+// };
+}
+
+
+let fArr = [
+{name: "John", city: "delhi" },
+{name: "Peter", city: "bangalore" },
+{name: "Mike", city: "Bangalore" },
+{name: "Rachel", city: "Hyderabad" }
+]
+filterByCity(fArr);
+
+module.exports = filterByCity;
