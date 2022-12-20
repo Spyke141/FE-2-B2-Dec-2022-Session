@@ -1,0 +1,16 @@
+function findLength(arr) {
+    arr = arr.map((str) => {
+      if (str==null || str == 0 || str == undefined){
+        return 0;       
+      }
+      else {
+        console.log(str.length);
+        return str.length;
+        }
+    })
+    return arr;
+}
+
+let farr = ["Hi","My","Name",null, "is","Spyke",null]
+findLength(farr);
+module.exports = findLength;
