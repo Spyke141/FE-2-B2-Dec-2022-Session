@@ -67,6 +67,29 @@ convertArray(newArr);
 ================================================================================
 Arrow Function
 ================================================================================
+let modify = (array) => {
+  let result = array.map( function(a){
+    return isPrime(a) ? a+=1 : a*=2;
+  })
+  console.log(result);
+  return result;
+}
+
+function isPrime(n) {
+if(n == 0 || n == 1) {
+    return false;
+}
+for(let i = 2 ; i*i <= n ; i++) {
+    if(n%i == 0) {
+        return false;
+    }
+}
+return true;}
+
+module.exports = modify;
+
+let fArr = [1]
+modify(fArr);
 
 ================================================================================
 Try Catch
