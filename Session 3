@@ -145,5 +145,17 @@ if (strStartsWithALetter) {
 
 module.exports = isAlphabet;
 ================================================================================
-
+Onject
 ================================================================================
+function personDetail(a, b) {
+     const emp = new Object();
+     emp.firstName = a;
+     emp.lastName = b;
+     emp.fullName = a+" "+b;
+     console.log(emp);
+     return emp;
+}
+
+personDetail("John","Smith");
+
+module.exports = personDetail;
