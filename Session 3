@@ -46,3 +46,24 @@ let fArr = [
 filterByCity(fArr);
 
 module.exports = filterByCity;
+
+================================================================================
+For Each
+================================================================================
+function convertArray(arr) {
+    const tArr = [];
+    arr.forEach(function(_,a){
+       tArr.push((a+1)*(arr[a]));
+    })
+    console.log(tArr);
+    return tArr;
+}
+
+module.exports = convertArray;
+
+let newArr = [1, 2, 2, 3, 1, 2];
+convertArray(newArr);
+
+================================================================================
+Arrow Function
+================================================================================
